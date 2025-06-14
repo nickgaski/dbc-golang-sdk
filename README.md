@@ -194,38 +194,48 @@ Includes:
 
 ```
 dbc-golang-sdk/
-├── README.md                          # This file
-├── setup.sh                           # One-command automated setup
-├── test.sh                            # Test setup and functionality
-├── run_all.sh                         # Run all assessment examples
-├── Makefile                           # Development commands
-├── go.mod & go.sum                    # Go dependencies
-├── .env                               # Environment configuration (auto-created)
-│
-├── pkg/dbc/                           # Core SDK Package
-│   ├── client.go                      # Main client (assessment interface)
-│   ├── constants.go                   # Meteora program constants
-│   ├── meteora_types.go              # Complete type definitions
-│   ├── instructions.go               # Instruction builders
-│   ├── config.go                     # Configuration utilities
-│   ├── migration.go                  # Migration functionality
-│   ├── types.go                      # Additional types
-│   └── utils.go                      # Utility functions
-│
-├── examples/assessment/               # Assessment Examples
-│   ├── 01_create_config.go           # CreateConfig
-│   ├── 02_create_pool.go             # CreatePool
-│   ├── 03_swap.go                    # Swap
-│   ├── 04_swap_quote.go              # SwapQuote (key requirement)
-│   ├── 05_claim_trading_fee.go       # ClaimTradingFee
-│   ├── 06_withdraw_leftover.go       # WithdrawLeftover
-│   ├── 07_migrate_damm_v1.go         # DAMM V1 Migration
-│   └── 08_migrate_damm_v2.go         # DAMM V2 Migration
-│
-└── examples/meteora/                  # Additional Examples
-    ├── test_math_functions.go        # Mathematical functions
-    ├── create_pool_and_swap.go       # Pool creation demo
-    └── get_pool_info.go              # Pool information
+├── ASSESSMENT_STATUS.md
+├── COMMANDS.md
+├── LICENSE
+├── Makefile
+├── README.md
+├── examples
+│   ├── assessment
+│   │   ├── 01_create_config.go
+│   │   ├── 02_create_pool.go
+│   │   ├── 03_swap.go
+│   │   ├── 04_swap_quote.go
+│   │   ├── 05_claim_trading_fee.go
+│   │   ├── 06_withdraw_leftover.go
+│   │   ├── 07_migrate_damm_v1.go
+│   │   └── 08_migrate_damm_v2.go
+│   └── meteora
+│       ├── create_pool_and_swap.go
+│       ├── get_pool_info.go
+│       └── test_math_functions.go
+├── go.mod
+├── go.sum
+├── pkg
+│   └── dbc
+│       ├── anchor_utils.go
+│       ├── anchor_utils_test.go
+│       ├── client.go
+│       ├── config.go
+│       ├── constants.go
+│       ├── instructions.go
+│       ├── instructions_test.go
+│       ├── meteora_types.go
+│       ├── migration.go
+│       ├── serialization.go
+│       ├── types.go
+│       └── utils.go
+├── run_all.sh
+├── scripts
+│   ├── initialize_pda_accounts.go
+│   └── verify_program_deployment.go
+├── setup.sh
+├── test.sh
+└── verify_assessment.sh
 ```
 
 ## ✅ Assessment Verification
